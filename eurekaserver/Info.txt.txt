@@ -1,0 +1,7 @@
+In this project, first added the dependencies at the time of project creation in STS( Spring Tool Suite).
+Here is the dependency: Eureka Server
+After click on finish to create the project, annotate the @EnableEurekaServer to act as a Eureka server.
+open App.properties in the resource folder, add these properties
+eureka.client.register-with-eureka=false 
+eureka.client.fetch-registry=false
+NOTE: If you are not allowed the self registry, otherwise don't mention these points in app.properties
