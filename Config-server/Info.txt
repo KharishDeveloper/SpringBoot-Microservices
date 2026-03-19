@@ -1,0 +1,9 @@
+In this project, first added the dependencies at the time of project creation in STS( Spring Tool Suite).
+Here are the dependencies: Eureka Client, Config Server, and Spring Web.
+After click on finish to create the project, annotate the @EnableConfigServer to act as a Config server.
+Open App.properties in the resource folder, and add these properties
+
+spring.cloud.config.server.git.uri=https://github.com/KharishDeveloper/Config-credentials
+
+If you add the above line, this means taking the data from this path, and this data will be useful for all projects. So finally, this project will act as a config server.
+If you didn't mention this line, either the project didn't start or didn't work as expected.
