@@ -1,0 +1,40 @@
+In this project, first added the dependencies at the time of project creation in STS( Spring Tool Suite).
+Here are the dependencies: Eureka Client, Config Client, Spring Data JPA, Spring Boot Configuration Processor, MySQL connector, and Spring Web.
+After creating the config client project, you have POJO class-1(representing the database table), POJO class-2(representing config server fields), Interface-1(able to perform database operation directly), and ConfigController(having all endpoints).
+
+
+In ConfigClientApplication, as of now, I haven't changed or modified anything(existing @SpringBootApplication annotation)
+
+In POJO class-1(ClassName= UserDemo.Java), having the fields like field details like name, id, and so on, getters and setters, user-defined constructor and pre-defined constructor, toString() method.
+
+In POJO class-2(ClassName=ConfigDetails.Java), having the config server field details like username, pwd, and url, what are the details to fetch from the config server? So, I can create variable names, getters and setters, a user-defined constructor, a predefined constructor, and toString() method.
+
+After creating, we have to add the annotations. Here are the annotations @Component and @Confgurationproperties(prefix=" if needed pass value"), like in the server file, saved the data like this: config-details.username. IN this file, we created the variable username. So, in prefix mention the config-details.
+
+@Component is used for creating the bean by spring framework.
+
+In Interface-1, I extended to the JpaRepository<POJOClass, WrapperClass>
+
+I mentioned the WrapperClass. In our POJOClass, having the primary key. If the primary key is int-based, then mention the Integer.class like this.
+For POJOClass, I mentioned the POJOclass-1 because in this class, representing database-table.
+
+In this interface, I added the annotation called @Repository
+
+In the ConfigController, I have required variables like ConfigDetails(Autowired), and Interface-1(Autowired).
+I added the REST API Mapping, and added the annotation at class-level are @RestController, @ComponentScan(basePackages="com"), and @RequestMapping("provide path").
+
+
+
+Open App.properties in the resource folder, and add these properties
+
+spring.config.import=optional:configserver:http://localhost:8887/
+
+2. spring.datasource.username=${config-service.username}
+
+Here, Line-1 represents where the config server runs on port number and full path, so I provided it as it is.
+
+Here Line-2. represents, taking the data from the config server, so we provide the placeholder like that.
+
+
+
+If you done like this, the project will run successfully. Before running the project, the config server project will run before the config client.
