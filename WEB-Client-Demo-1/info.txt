@@ -1,0 +1,9 @@
+In this project, first add the dependencies when creating the project in STS (Spring Tool Suite).
+Here are the dependencies: Eureka Client, Load Balancer, Web Flux, and Spring Web.
+After clicking on finish to create the project.
+
+After creating the project, create the class ClientDemo(responsible for endpoints).
+
+In clientDemo.Java, add the annotations @RestController and @RequestMapping("URL start point") at the top of the class. In the current class, create a method that is responsible for redirecting to the provided URL, get the response, and returning the response in the current class method, and add the annotation @GetMapping("URL End-point"). If you have any doubts in implementing the web-client, refer to the class src/main/java/demo/example/demo/ClientDemo.Java.
+
+IN app.properties, didn't make any changes.
