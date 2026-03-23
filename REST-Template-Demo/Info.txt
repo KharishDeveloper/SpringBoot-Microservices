@@ -1,0 +1,15 @@
+In this project, first add the dependencies when creating the project in STS (Spring Tool Suite).
+Here are the dependencies: Eureka Client, Load Balancer, and Spring Web.
+After clicking on finish to create the project.
+
+After creating the project, you have to create the classes LoadbalancerConfigurationFile-1(Name = LoadConfig.Java) and TemplateDemo.Java.
+
+The main purpose of this project is to build communication between two services. One service is config-client, and another one is REST-Template-Demo.
+
+After creating LoadConfig.java, add the @Configuration annotation above the class name. After this, create a bean named RestTemplate. It is creating the RestTemplate object. After, add the annotations @Bean and @LoadBalanced.
+
+After creating TemplateDemo.java, at the top of the class, add the annotations @RestController and @RequestMapping("URL startpoint"). Add autowiring for RestTemplate. Create one method in the current Java class. The purpose of this method is to call the provided URL and return the response in the current class method, and add the annotation at the top of the method definition is @GetMapping("URL endpoint")
+
+So it will create a RestTemplate bean (Object) for load balancing.
+
+In App.properties in the resource folder, no changes were made.
