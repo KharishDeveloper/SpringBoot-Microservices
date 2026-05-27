@@ -1,2 +1,4 @@
 
-EurekaServer -> Config-server -> Config-Client -> REST template demo -> WEB Client demo -> Open Feign -> Entry Point -> 
+EurekaServer -> Config-server -> Config-Client -> REST template demo -> WEB Client demo -> Open Feign -> Entry Point -> OTP-Service -> Spring AI Service -> User Auth Service. 
+
+Up to now.
