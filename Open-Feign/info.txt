@@ -9,4 +9,4 @@ create the class FeignController.Java(responsible for calling other micro-servic
 In FeignController.java, add the annotations @RestController, @RequestMapping("Add text here, which name you want to call with this class") before the class name. Add the @Autowired of the interface OpenFeignInter and the Environment class. Create a method that is responsible for redirecting to the provided project name and API path, and return the response of that method. If you have any doubts, please refer to the class /Open-Feign/src/main/java/com/example/demo/FeignController.java
 
 
-IN app.properties, didn't make any changes.
+IN app.properties, didn't make any changes except the port number.
