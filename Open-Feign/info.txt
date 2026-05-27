@@ -1,0 +1,12 @@
+In this project, first add the dependencies when creating the project in STS (Spring Tool Suite).
+Here are the dependencies: Eureka Client, Open Feign, Load Balancer, and Spring Web.
+After clicking on finish to create the project.
+
+After creating the project, create the interface OpenFeignINter(responsible for maintaining the copy of endpoints of other micro-services), and add the endpoint that you want to call from here, and add the annotation of @getMapping and provide the exact endpoint in the parameter of getMapping. Add the annotation @FeignClient before the interface.
+
+create the class FeignController.Java(responsible for calling other micro-service using this micro-service)
+
+In FeignController.java, add the annotations @RestController, @RequestMapping("Add text here, which name you want to call with this class") before the class name. Add the @Autowired of the interface OpenFeignInter and the Environment class. Create a method that is responsible for redirecting to the provided project name and API path, and return the response of that method. If you have any doubts, please refer to the class /Open-Feign/src/main/java/com/example/demo/FeignController.java
+
+
+IN app.properties, didn't make any changes.
